@@ -271,6 +271,7 @@ class DPCode(StrEnum):
     RESET_MAP = "reset_map"
     RESET_ROLL_BRUSH = "reset_roll_brush"
     ROLL_BRUSH = "roll_brush"
+    ROOM_TEMPERATURE_CALIBRATION = "roomtemp_calibrat"
     SEEK = "seek"
     SENSITIVITY = "sensitivity"  # Sensitivity
     SENSOR_HUMIDITY = "sensor_humidity"
@@ -351,6 +352,8 @@ class DPCode(StrEnum):
     VA_BATTERY = "va_battery"
     VA_HUMIDITY = "va_humidity"
     VA_TEMPERATURE = "va_temperature"
+    VALVE = "valve"
+    VALVE_SET = "valve_set"
     VOC_STATE = "voc_state"
     VOC_VALUE = "voc_value"
     VOICE_SWITCH = "voice_switch"
@@ -365,6 +368,7 @@ class DPCode(StrEnum):
     WET = "wet"  # Humidification
     WINDOW_CHECK = "window_check"
     WINDOW_STATE = "window_state"
+    WINDOWS_STATE = "windows_state"
     WINDSPEED = "windspeed"
     WIRELESS_BATTERYLOCK = "wireless_batterylock"
     WIRELESS_ELECTRICITY = "wireless_electricity"

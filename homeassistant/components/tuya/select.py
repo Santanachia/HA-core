@@ -215,6 +215,16 @@ SELECTS: dict[str, tuple[SelectEntityDescription, ...]] = {
             translation_key="vacuum_mode",
         ),
     ),
+    # Thermostat
+    # https://developer.tuya.com/en/docs/iot/f?id=K9gf45ld5l0t9
+    "wk": (
+        SelectEntityDescription(
+            key=DPCode.VALVE_SET,
+            name="Valve set",
+            entity_category=EntityCategory.CONFIG,
+            icon="mdi:valve",
+        ),
+    ),
     # Fan
     # https://developer.tuya.com/en/docs/iot/f?id=K9gf45vs7vkge
     "fs": (
