@@ -38,6 +38,13 @@ TUYA_HVAC_TO_HA = {
     "wind": HVACMode.FAN_ONLY,
 }
 
+TUYA_EXTRA_ATTRS = [
+    "fault",
+    "roomtemp_calibrat",
+    "valve_set",
+    "valve",
+    "power_state"
+]
 
 @dataclass
 class TuyaClimateSensorDescriptionMixin:
@@ -471,6 +478,12 @@ class TuyaClimateEntity(TuyaEntity, ClimateEntity):
             return SWING_VERTICAL
 
         return SWING_OFF
+
+    @property                                                        
+    def extra_state_attributes(self):
+        """Return device specific state attributes."""
+        return { k:v for (k, v) in self.device.status.items()
+                 if k in TUYA_EXTRA_ATTRS }
 
     def turn_on(self) -> None:
         """Turn the device on, retaining current HVAC (if supported)."""
